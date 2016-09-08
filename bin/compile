@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
-echo '-----> Applying pspell'
-build_dir=$1
-bp_dir=$(cd $(dirname $0); cd ..; pwd)
-cp -rp ${bp_dir}/user ${build_dir}
-echo "extension=/app/user/src/pspell/modules/pspell.so" >> /app/.heroku/php/etc/php/php.ini
-echo '       - ext-pspell'
-echo '       Done'
+BUILD_DIR=$1
+CACHE_DIR=$2
+BIN_DIR=$(cd $(dirname $0); pwd)
+BP_DIR=$(cd $(dirname $0); cd ..; pwd)
+
+#PSPELL適用
+source $BP_DIR/inc/apply_pspell.sh
+
+#WHTMLTOPDF適用
+source $BP_DIR/inc/apply_pdf.sh
+
+
