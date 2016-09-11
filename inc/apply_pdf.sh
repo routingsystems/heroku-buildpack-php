@@ -12,7 +12,7 @@ WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 
-cp -rp $BP_DIR/user/src/pdf/wkhtmltopdf.deb WKHTMLTOPDF_PKG
+cp -p $BP_DIR/user/src/pdf/wkhtmltopdf.deb $WKHTMLTOPDF_PKG
 FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 
 #if [ -f $WKHTMLTOPDF_PKG ]; then
