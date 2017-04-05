@@ -28,7 +28,7 @@ FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 echo "       - Unzip package..."
 # dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
 # tar xvfJ $WKHTMLTOPDF_PKG -C $WKHTMLTOPDF_PATH
-unzip $WKHTMLTOPDF_PKG -d $WKHTMLTOPDF_PATH
+jar xvf $WKHTMLTOPDF_PKG -d $WKHTMLTOPDF_PATH
 
 echo "       - Setting permissions"
 chmod +x $WKHTMLTOPDF_BINARIES/*
