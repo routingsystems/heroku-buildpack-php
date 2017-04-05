@@ -12,7 +12,7 @@ mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.tar.xz"
 WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
 # WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
-WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/wkhtmltox/usr/local/bin"
+WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/wkhtmltox/bin"
 
 # cp -p $BP_DIR/user/src/pdf/wkhtmltopdf.deb $WKHTMLTOPDF_PKG
 cp -p $BP_DIR/user/src/pdf/wkhtmltopdf.tar.xz $WKHTMLTOPDF_PKG
