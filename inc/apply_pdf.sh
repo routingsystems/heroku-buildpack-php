@@ -24,6 +24,8 @@ FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 #  echo "-----> Downloading wkhtmltopdf Debian package"
 #  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_PKG
 #fi
+echo "       - Create folder"
+mkdir $WKHTMLTOPDF_PATH
 
 echo "       - Unzip package..."
 # dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
