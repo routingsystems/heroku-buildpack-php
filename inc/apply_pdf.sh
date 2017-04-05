@@ -22,7 +22,7 @@ FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 #  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_PKG
 #fi
 
-echo "       - Unpacking Debian package"
+echo "       - Unpacking Debian package..."
 dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
 
 echo "       - Setting permissions"
@@ -34,7 +34,7 @@ mv $WKHTMLTOPDF_BINARIES/* $BIN_PATH/
 echo "       - Cleaning up"
 rm -rf $WKHTMLTOPDF_PATH
 
-echo "       - Installing fonts"
+echo "       - Installing fonts..."
 mkdir -p $1/.fonts
 ls $FONTS_DIR
 cp $FONTS_DIR/* $1/.fonts/
