@@ -9,13 +9,12 @@ mkdir -p $CACHE_DIR $BIN_PATH $TMP_PATH
 
 #WKHTMLTOPDF_URL="http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-trusty-amd64.deb"
 # WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.deb"
-# WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.tar.xz"
-WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf"
-WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltopdf"
+WKHTMLTOPDF_PKG="$CACHE_DIR/wkhtmltopdf.tar.xz"
 # WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/usr/local/bin"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/wkhtmltox/usr/local/bin"
 
-cp -p $BP_DIR/user/src/pdf/wkhtmltopdf.deb $WKHTMLTOPDF_PKG
+# cp -p $BP_DIR/user/src/pdf/wkhtmltopdf.deb $WKHTMLTOPDF_PKG
+cp -p $BP_DIR/user/src/pdf/wkhtmltopdf.tar.xz $WKHTMLTOPDF_PKG
 FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 
 #if [ -f $WKHTMLTOPDF_PKG ]; then
@@ -27,8 +26,7 @@ FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 
 echo "       - Unzip package..."
 # dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
-# tar xvfJ $WKHTMLTOPDF_PKG -C $WKHTMLTOPDF_PATH
-mv $WKHTMLTOPDF_PKG/* $WKHTMLTOPDF_PATH
+tar xvfJ $WKHTMLTOPDF_PKG -C $WKHTMLTOPDF_PATH
 
 echo "       - Setting permissions"
 chmod +x $WKHTMLTOPDF_BINARIES/*
