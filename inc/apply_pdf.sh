@@ -25,7 +25,7 @@ FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 #  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_PKG
 #fi
 echo "       - Create folder"
-mkdir $WKHTMLTOPDF_PATH
+mkdir -p $WKHTMLTOPDF_PATH
 
 echo "       - Unzip package..."
 # dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
