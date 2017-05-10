@@ -24,25 +24,25 @@ FONTS_DIR=$(cd "$BP_DIR/user/src/pdf/fonts"; pwd)
 #  echo "-----> Downloading wkhtmltopdf Debian package"
 #  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_PKG
 #fi
-echo "       - Create folder"
+echo "       - Create folder and suce ma bite"
 mkdir -p $WKHTMLTOPDF_PATH
 
 echo "       - Unzip package..."
 # dpkg -x $WKHTMLTOPDF_PKG $WKHTMLTOPDF_PATH
 tar xpvf $WKHTMLTOPDF_PKG -C $WKHTMLTOPDF_PATH
 
-echo "       - Setting permissions"
+echo "       - Setting permissions, dude"
 chmod +x $WKHTMLTOPDF_BINARIES/*
 
-echo "       - Moving binaries to the right place"
+echo "       - Moving binaries to the right place, my friend"
 mv $WKHTMLTOPDF_BINARIES/* $BIN_PATH/
 
-echo "       - Cleaning up"
+echo "       - Cleaning up !!!"
 rm -rf $WKHTMLTOPDF_PATH
 
-echo "       - Installing fonts..."
+echo "       - Installing fonts...feeeeww"
 mkdir -p $1/.fonts
 ls $FONTS_DIR
 cp $FONTS_DIR/* $1/.fonts/
 fc-cache -f $1/.fonts
-echo "       Done"
+echo "       Done Biatch!"
